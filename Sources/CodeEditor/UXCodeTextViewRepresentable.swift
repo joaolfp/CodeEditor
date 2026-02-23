@@ -248,6 +248,8 @@ struct UXCodeTextViewRepresentable : UXViewRepresentable {
 
       let scrollView = NSScrollView()
       scrollView.hasVerticalScroller = true
+      scrollView.borderType = .noBorder
+      scrollView.drawsBackground = false
       scrollView.documentView = textView
       
       updateTextView(textView)
