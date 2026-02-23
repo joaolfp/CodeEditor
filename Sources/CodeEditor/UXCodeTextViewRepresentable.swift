@@ -249,10 +249,11 @@ struct UXCodeTextViewRepresentable : UXViewRepresentable {
       let scrollView = NSScrollView()
       scrollView.hasVerticalScroller = true
       scrollView.borderType = .noBorder
-      scrollView.drawsBackground = false
       scrollView.documentView = textView
-      
+
       updateTextView(textView)
+      scrollView.backgroundColor = textView.backgroundColor ?? .textBackgroundColor
+      scrollView.drawsBackground = true
       return scrollView
     }
     
@@ -267,6 +268,8 @@ struct UXCodeTextViewRepresentable : UXViewRepresentable {
       textView.customBackgroundColor = customBackgroundColor
       textView.textContainerInset = inset
       updateTextView(textView)
+      scrollView.backgroundColor = textView.backgroundColor ?? .textBackgroundColor
+      scrollView.drawsBackground = true
     }
   #else // iOS etc
     private var edgeInsets: UIEdgeInsets {
