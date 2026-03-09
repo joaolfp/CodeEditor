@@ -24,6 +24,7 @@ public extension CodeEditor.ThemeName {
   @inlinable static var pojoaque  : Self { Self(rawValue: "pojoaque") }
   @inlinable static var agate     : Self { Self(rawValue: "agate") }
   @inlinable static var ocean     : Self { Self(rawValue: "ocean") }
+  @inlinable static var xcodeWhite : Self { Self(rawValue: "xcode") }
   
   @inlinable
   static var atelierSavannaLight : Self {

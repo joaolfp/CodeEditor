@@ -153,7 +153,6 @@ public struct CodeEditor: View {
   /// Returns the available languages in the associated Highlightr package.
   public static var availableLanguages =
     Highlightr()?.supportedLanguages().map(Language.init).sorted() ?? []
-  
 
   /**
    * Flags available for `CodeEditor`, currently just:
